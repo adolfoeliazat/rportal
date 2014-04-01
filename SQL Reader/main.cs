@@ -30,16 +30,16 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-        private void main_Load(object sender, EventArgs e)
+        public void main_Load(object sender, EventArgs e)
         {
             //AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
-            if (User2.GP == 1)
-            { 
-                ast.Hide(); 
-            }
-            if (User1.GP == 3)
+            if (User2.IsAdmin == false)
             {
-                ast.Show(); 
+                ast.Hide();
+            }
+            if (User1.IsAdmin == true)
+            {
+                ast.Show();
             }
         }
 
