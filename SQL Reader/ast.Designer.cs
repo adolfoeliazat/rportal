@@ -55,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -298,11 +299,23 @@
             this.label11.Text = "*";
             this.label11.Visible = false;
             // 
+            // back
+            // 
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.back.Location = new System.Drawing.Point(2, 521);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(64, 23);
+            this.back.TabIndex = 58;
+            this.back.Text = "back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // ast
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 545);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.reset);
@@ -368,6 +381,7 @@
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button back;
     }
 }
 

@@ -242,5 +242,12 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void back_Click(object sender, EventArgs e)
+        {
+            var myForm = new main();
+            myForm.Show();
+            this.Hide();
+        }
+
         }
     }

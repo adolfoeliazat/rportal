@@ -102,6 +102,13 @@ namespace WindowsFormsApplication1
         dataGridView.DataSource = ds.Tables[0];
     }
 
+    private void back_Click(object sender, EventArgs e)
+    {
+        var myForm = new main();
+        myForm.Show();
+        this.Hide();
+    }
+
 
 
     }

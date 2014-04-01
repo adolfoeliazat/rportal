@@ -56,6 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.reference = new System.Windows.Forms.TextBox();
             this.ptft = new System.Windows.Forms.ComboBox();
+            this.back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -75,10 +76,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Niagara Solid", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(574, 55);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(510, 54);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 38);
+            this.label10.Size = new System.Drawing.Size(279, 39);
             this.label10.TabIndex = 28;
             this.label10.Text = "Applicant Search";
             // 
@@ -320,11 +321,23 @@
             this.ptft.Size = new System.Drawing.Size(41, 21);
             this.ptft.TabIndex = 56;
             // 
+            // back
+            // 
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.back.Location = new System.Drawing.Point(1211, 805);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(64, 23);
+            this.back.TabIndex = 57;
+            this.back.Text = "back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // mst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 831);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.ptft);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.reference);
@@ -393,5 +406,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox reference;
         private System.Windows.Forms.ComboBox ptft;
+        private System.Windows.Forms.Button back;
     }
 }
