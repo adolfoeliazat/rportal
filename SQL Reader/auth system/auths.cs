@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
    public class auths
     {
         public static int IsAdmin;
-        public static enum Group : int{User, SR, Admin};
+        public enum Group : int{User, SR, Admin};
         public void IsUserAdmin(object sender, EventArgs e)
         { }
         public void IsUserSuper(object sender, EventArgs e)

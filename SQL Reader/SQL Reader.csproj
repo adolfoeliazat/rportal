@@ -80,17 +80,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ast.cs">
+    <Compile Include="editing tools\ast.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ast.Designer.cs">
+    <Compile Include="editing tools\ast.Designer.cs">
       <DependentUpon>ast.cs</DependentUpon>
     </Compile>
-    <Compile Include="auths.cs" />
-    <Compile Include="login.cs">
+    <Compile Include="auth system\auths.cs" />
+    <Compile Include="auth system\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="auth system\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
@@ -99,24 +99,24 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="mst.cs">
+    <Compile Include="searching\mst.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mst.Designer.cs">
+    <Compile Include="searching\mst.Designer.cs">
       <DependentUpon>mst.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ast.resx">
+    <EmbeddedResource Include="editing tools\ast.resx">
       <DependentUpon>ast.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
+    <EmbeddedResource Include="auth system\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mst.resx">
+    <EmbeddedResource Include="searching\mst.resx">
       <DependentUpon>mst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
