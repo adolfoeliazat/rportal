@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ast = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +88,23 @@
             this.label2.Text = "This software contains confidential information. Unauthorized access to these dat" +
     "abases and systems will be punished by law.";
             // 
+            // close
+            // 
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.close.Location = new System.Drawing.Point(277, 482);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 23);
+            this.close.TabIndex = 9;
+            this.close.Text = "Close";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 538);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ast);
             this.Controls.Add(this.label1);
@@ -113,5 +126,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ast;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button close;
     }
 }

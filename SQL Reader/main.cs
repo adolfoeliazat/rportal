@@ -33,28 +33,31 @@ namespace WindowsFormsApplication1
         public void main_Load(object sender, EventArgs e)
         {
             // can we determine the access group? If user then hide our db editor. If admin then show.
-            //AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
-            //Boolean U1GP = true;
-            //login.UN = login.userName.Text;
-            ast.Hide();
-            if (auths.IsAdmin == 1)
+            //AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit); 
+            if ((auths.IsAdmin) == (1))
             {
                 ast.Show();
             }
-            if (auths.IsAdmin == 0)
+            if ((auths.IsAdmin) == (0))
             {
                 ast.Hide();
             }
-           // else
-           // {
-             //   
-            //}
+            if ((auths.IsAdmin) == (2))
+            {
+                MessageBox.Show("err", "errrr");
+                ast.Hide();
+            }
         }
 
         static void OnProcessExit(object sender, EventArgs e)
         {
             //Console.WriteLine("I'm out of here");
             //Form.ActiveForm.Close();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     
     //
