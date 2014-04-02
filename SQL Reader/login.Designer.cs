@@ -109,8 +109,10 @@
             // 
             this.password.Location = new System.Drawing.Point(225, 260);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(198, 20);
             this.password.TabIndex = 14;
+            this.password.UseSystemPasswordChar = true;
             // 
             // validate
             // 
@@ -153,8 +155,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox userName;
-        private System.Windows.Forms.TextBox password;
+        public System.Windows.Forms.TextBox userName;
+        public System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Button validate;
     }
 }

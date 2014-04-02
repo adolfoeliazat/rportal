@@ -32,15 +32,23 @@ namespace WindowsFormsApplication1
 
         public void main_Load(object sender, EventArgs e)
         {
+            // can we determine the access group? If user then hide our db editor. If admin then show.
             //AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
-            if (User2.IsAdmin == false)
-            {
-                ast.Hide();
-            }
-            if (User1.IsAdmin == true)
+            //Boolean U1GP = true;
+            //login.UN = login.userName.Text;
+            ast.Hide();
+            if (auths.IsAdmin == 1)
             {
                 ast.Show();
             }
+            if (auths.IsAdmin == 0)
+            {
+                ast.Hide();
+            }
+           // else
+           // {
+             //   
+            //}
         }
 
         static void OnProcessExit(object sender, EventArgs e)
