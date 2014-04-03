@@ -34,6 +34,7 @@
             this.ast = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.close = new System.Windows.Forms.Button();
+            this.intv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.mst.Location = new System.Drawing.Point(257, 251);
             this.mst.Name = "mst";
             this.mst.Size = new System.Drawing.Size(117, 23);
-            this.mst.TabIndex = 5;
+            this.mst.TabIndex = 2;
             this.mst.Text = "Applicant Search";
             this.mst.UseVisualStyleBackColor = true;
             this.mst.Click += new System.EventHandler(this.mst_Click);
@@ -73,7 +74,7 @@
             this.ast.Location = new System.Drawing.Point(257, 280);
             this.ast.Name = "ast";
             this.ast.Size = new System.Drawing.Size(117, 23);
-            this.ast.TabIndex = 7;
+            this.ast.TabIndex = 3;
             this.ast.Text = "Applicant Editor";
             this.ast.UseVisualStyleBackColor = true;
             this.ast.Click += new System.EventHandler(this.ast_Click);
@@ -94,16 +95,28 @@
             this.close.Location = new System.Drawing.Point(277, 482);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 23);
-            this.close.TabIndex = 9;
+            this.close.TabIndex = 4;
             this.close.Text = "Close";
             this.close.UseVisualStyleBackColor = true;
             this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // intv
+            // 
+            this.intv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.intv.Location = new System.Drawing.Point(257, 222);
+            this.intv.Name = "intv";
+            this.intv.Size = new System.Drawing.Size(117, 23);
+            this.intv.TabIndex = 1;
+            this.intv.Text = "Interviews";
+            this.intv.UseVisualStyleBackColor = true;
+            this.intv.Click += new System.EventHandler(this.intv_Click);
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 538);
+            this.Controls.Add(this.intv);
             this.Controls.Add(this.close);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ast);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button ast;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button close;
+        private System.Windows.Forms.Button intv;
     }
 }

@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
             Check2 = password.Text;
             // working for now.. still want this cleaned into seperate functions
             // starting to move in some of these admin checks, need to add superusers still
-                if (Check1 == @U1 && Check2 == @U1P)
+       if (Check1 == @U1 && Check2 == @U1P)
            {
                 try { auths.IsAdmin = 1; }
                 finally
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
                 }
             }
                 //if (Check1 == @U2 && Check2 == @U2P)
-                if ((auths.IsAdmin)==(0))
+       if ((auths.IsAdmin) == (0) && (Check1 == @U2 && Check2 == @U2P))
             {
                 try
                 {
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
                     log = 1;
                 }
             }
-            if (log == 0)
+      if (log == 0)
             {
                 MessageBox.Show("Invalid username or password.", "Login Error."); 
             }

@@ -16,6 +16,13 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private void intv_Click(object sender, EventArgs e)
+        {
+            var myForm = new interviews.interview();
+            myForm.Show();
+            this.Hide();
+        }
+
         private void mst_Click(object sender, EventArgs e)
         {
             var myForm = new mst();
