@@ -17,6 +17,13 @@ namespace WindowsFormsApplication1
     }
    public class User1
     {
+       public void Sputterfish(object sender, EventArgs e)
+        {
+            string _UN = "admin";
+            string _PW = "thebigcheese";
+            try { }
+            finally { }
+        }
         public static string UN = "admin";
         public static string PW = "thebigcheese";
     }

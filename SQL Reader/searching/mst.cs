@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+____________________              __         .__   
+\______   \______   \____________/  |______  |  |  
+ |       _/|     ___/  _ \_  __ \   __\__  \ |  |  
+ |    |   \|    |  (  <_> )  | \/|  |  / __ \|  |__
+ |____|_  /|____|   \____/|__|   |__| (____  /____/
+        \/                                 \/      
+		
+(c) 2014 TeleNetwork Inc.
+Created by David Trimm
+ MST.cs - Mass Search Tool == 
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,11 +51,26 @@ namespace WindowsFormsApplication1
 
     private void search1_Click(object sender, EventArgs e)//search by first + last name
     {
+        // Lets search based off either first, last, or both..
+     string select2;
+         if ((firstname.Text)==(null))
+         {
+             string select = "select * from PreHire.dbo.Applicants where lname='" + lastname.Text.Trim() + "'";
+             select2 = select;
+         }
+         if ((lastname.Text) == (null))
+         {
+             string select = "select * from PreHire.dbo.Applicants where fname='" + firstname.Text.Trim() + "'";
+             select2 = select;
+         }
+         else 
+         {
+             string select = "select * from PreHire.dbo.Applicants where fname='" + firstname.Text.Trim() + "' AND lname='" + lastname.Text.Trim() + "'";
+             select2 = select;
+         }
         DataSet ds = new DataSet();
-        // dataGridView.DataSource = table.DefaultView;
-        string select = "select * from PreHire.dbo.Applicants where fname='" + firstname.Text.Trim() + "' AND lname='" + lastname.Text.Trim() + "'";
         SqlConnection conn = new SqlConnection("server=sql-prod.corp.telenetwork.com;Database=PreHire;User=sa; PWD=qwerty;");
-        SqlDataAdapter dataAdapter = new SqlDataAdapter(select, conn);
+        SqlDataAdapter dataAdapter = new SqlDataAdapter(select2, conn);
         SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
         dataAdapter.Fill(ds);
         dataGridView.ReadOnly = true;
@@ -89,7 +116,7 @@ namespace WindowsFormsApplication1
         dataGridView.DataSource = ds.Tables[0];
     }
 
-    private void button3_Click(object sender, EventArgs e)
+    private void button3_Click(object sender, EventArgs e)// search by pt/ft
     {
         DataSet ds = new DataSet();
         // dataGridView.DataSource = table.DefaultView;
@@ -102,12 +129,26 @@ namespace WindowsFormsApplication1
         dataGridView.DataSource = ds.Tables[0];
     }
 
-    private void back_Click(object sender, EventArgs e)
+    private void button4_Click(object sender, EventArgs e)// search by shift
+    {
+        DataSet ds = new DataSet();
+        string select = "select * from PreHire.dbo.Applicants where shift='" + shift.Text.Trim() + "'";
+        SqlConnection conn = new SqlConnection("server=sql-prod.corp.telenetwork.com;Database=PreHire;User=sa; PWD=qwerty;");
+        SqlDataAdapter dataAdapter = new SqlDataAdapter(select, conn);
+        SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+        dataAdapter.Fill(ds);
+        dataGridView.ReadOnly = true;
+        dataGridView.DataSource = ds.Tables[0];
+    }
+
+    private void back_Click(object sender, EventArgs e)// return to main
     {
         var myForm = new main();
         myForm.Show();
         this.Hide();
     }
+
+
 
 
 

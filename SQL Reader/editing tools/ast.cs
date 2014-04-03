@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+____________________              __         .__   
+\______   \______   \____________/  |______  |  |  
+ |       _/|     ___/  _ \_  __ \   __\__  \ |  |  
+ |    |   \|    |  (  <_> )  | \/|  |  / __ \|  |__
+ |____|_  /|____|   \____/|__|   |__| (____  /____/
+        \/                                 \/      
+		
+(c) 2014 TeleNetwork Inc.
+Created by David Trimm
+ AST.cs - Applicant Search Tool / Editor  == This file enables a SUPERUSER or ADMIN to make limited database changes.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +41,7 @@ namespace WindowsFormsApplication1
         {
             //adding a reader conn for access to the recruiting db
             conn.Open();
+
             cmd.CommandText = "select * from PreHire.dbo.Applicants where fname='" + firstname.Text.Trim() + "' AND lname='" + lastname.Text.Trim() + "'";
             cmd.Connection = conn;
             rdr = cmd.ExecuteReader();

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RPortal")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("TeleNetwork Inc.")]
 [assembly: AssemblyProduct("RPortal")]
 [assembly: AssemblyCopyright("Copyright © TeleNetwork Inc. 2014")]
 [assembly: AssemblyTrademark("")]
