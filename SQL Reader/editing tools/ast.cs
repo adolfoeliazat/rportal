@@ -252,7 +252,11 @@ namespace WindowsFormsApplication1
 
         private void ast_Load(object sender, EventArgs e)
         {
-
+            if ((auths.IsAdmin) == (1)) 
+            {
+                try { addy.Enabled = true; state.Enabled = true; city.Enabled = true; zip.Enabled = true; pnumber.Enabled = true; write.Enabled = true; ptft.Enabled = true; shift.Enabled = true; callcenter.Enabled = true; }
+                finally { MessageBox.Show("ADMIN POOOOOWER!", "DEBUG INFO"); }
+            }
         }
 
         private void back_Click(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.interviews
 {
     public partial class interview : Form
     {
-        public static enum CallCenters : int { SM, AUS, GF, DTX, DCA }
+        //enum CallCenters { SM, AUS, GF, DTX, DCA }// I would like to have each callcenter enumd, this needs to reflect the sqldb entry for callcenters..
         public interview()
         {
             InitializeComponent();
@@ -37,18 +37,28 @@ namespace WindowsFormsApplication1.interviews
             this.Hide();
         }
 
-        private void interview_Load(object sender, EventArgs e)
+        private void interview_Load(object sender, EventArgs e)// set our default table view to load by the SM call center
         {
             DataSet ds = new DataSet();
             string select = @"SELECT TOP 5 * FROM dttests.dbo.scheduled a
                               WHERE center='SM'
                               ORDER BY time desc";
+            // Omiting this one for meow, it will be back once I merge the dbs and can get a more accurate search.
             //LEFT OUTER join [sql-prod].PreHire.dbo.Applicants e on e.appid=a.appid
             SqlConnection conn = new SqlConnection("server=itdev.corp.telenetwork.com;Database=dttests;User=sa; PWD=gR!FfiN-;");
             SqlDataAdapter dataAdapter = new SqlDataAdapter(select, conn);
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
             dataAdapter.Fill(ds);
-            dataGridView.ReadOnly = true;
+            dataGridView.ReadOnly = false;
+            // Admin Only Functions Here
+            write.Hide();
+            if ((auths.IsAdmin) == (1)) {
+                try { 
+                    dataGridView.ReadOnly = false;
+                    write.Show();
+                    }
+                finally { MessageBox.Show("ADMIN EDITING GRANTED","DEBUG INFO"); }
+            }
             dataGridView.DataSource = ds.Tables[0];
         }
     }
