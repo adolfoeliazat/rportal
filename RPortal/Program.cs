@@ -15,7 +15,8 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            //Application.Run(new login());
+            Application.Run(new sql_log.sqlwriterlog());
             //Application.Run(new main());
             //Application.Run(new ast());
             //Application.Run(new mst());
