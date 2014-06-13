@@ -41,13 +41,30 @@ namespace WindowsFormsApplication1.interviews
         private void interview_Load(object sender, EventArgs e)// set our default table view to load by the SM call center
         {
             DataSet ds = new DataSet();
-            //Note: This select string needs to be grabbing from the actual table for interviews.. as much as i'd like to start over I dont see that being a possible port.. no need.
-            string select = @"SELECT TOP 5 * FROM dttests.dbo.scheduled a
-                              WHERE center='SM'
-                              ORDER BY time desc";
-            // Omiting this one for meow, it will be back once I merge the dbs and can get a more accurate search.
-            //LEFT OUTER join [sql-prod].PreHire.dbo.Applicants e on e.appid=a.appid
-            SqlConnection conn = new SqlConnection("server=itdev.corp.telenetwork.com;Database=dttests;User=sa; PWD=gR!FfiN-;");
+            //Note: This now reflects the upcoming interviews query. This does how ever need to be sortable by BU.
+            string select = @"SELECT a.wah,i.sid,i.appid,a.email,i.starttime,
+									a.helpdesk,a.phone,a.fname,a.lname,
+									case a.callcenter 
+										when 1 then 'Aus' 
+										when 2 then 'SM' 
+										when 3 then 'Barnes' 
+										when 7 then 'Fiber'
+										when 8 then 'MTV'
+										when 9 then 'DTX'
+									end, i.stype 
+								FROM 
+									Prehire.dbo.Schedule i 
+									LEFT JOIN Prehire.dbo.Applicants a 
+										ON a.appid = i.appid 
+								WHERE
+									i.status = 'Open' AND 
+									(   i.stype = 'Interview' OR 
+										i.stype = '2nd Interview' OR 
+										i.stype = '3rd Interview') AND 
+									a.appstatus NOT LIKE 'hired' AND 
+									a.appstatus NOT LIKE 'lost' 
+								ORDER BY DATEDIFF(n,getdate(),i.starttime) ASC";
+            SqlConnection conn = new SqlConnection("server=sql-prod.corp.telenetwork.com;Database=PreHire;User=sa; PWD=qwerty;");
             SqlDataAdapter dataAdapter = new SqlDataAdapter(select, conn);
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
             dataAdapter.Fill(ds);
@@ -56,10 +73,11 @@ namespace WindowsFormsApplication1.interviews
             write.Hide();
             if ((auths.IsAdmin) == (1)) {
                 try { 
-                    dataGridView.ReadOnly = false;
+                    dataGridView.ReadOnly = true;
                     write.Show();
                     }
-                finally { MessageBox.Show("ADMIN EDITING GRANTED","DEBUG INFO"); }
+                finally { //MessageBox.Show("ADMIN EDITING GRANTED","DEBUG INFO"); 
+                        }
             }
             dataGridView.DataSource = ds.Tables[0];
         }
