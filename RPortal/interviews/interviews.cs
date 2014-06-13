@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1.interviews
     public partial class interview : Form
     {
         //enum CallCenters { SM, AUS, GF, DTX, DCA }// I would like to have each callcenter enumd, this needs to reflect the sqldb entry for callcenters..
+        // note: we now use bu or business unit to identify centers of operations.
         public interview()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace WindowsFormsApplication1.interviews
         private void interview_Load(object sender, EventArgs e)// set our default table view to load by the SM call center
         {
             DataSet ds = new DataSet();
+            //Note: This select string needs to be grabbing from the actual table for interviews.. as much as i'd like to start over I dont see that being a possible port.. no need.
             string select = @"SELECT TOP 5 * FROM dttests.dbo.scheduled a
                               WHERE center='SM'
                               ORDER BY time desc";
@@ -49,7 +51,7 @@ namespace WindowsFormsApplication1.interviews
             SqlDataAdapter dataAdapter = new SqlDataAdapter(select, conn);
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
             dataAdapter.Fill(ds);
-            dataGridView.ReadOnly = false;
+            dataGridView.ReadOnly = true;
             // Admin Only Functions Here
             write.Hide();
             if ((auths.IsAdmin) == (1)) {
