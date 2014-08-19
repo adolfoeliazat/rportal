@@ -8,9 +8,12 @@ ____________________              __         .__
 
 (c) 2014 TeleNetwork Inc.
 Created by David Trimm
-----------
 
 Todo:
 -----
-Integration of Telerik DevCraft UI.
-Encryption of user data strings.
+1. Port over completed and tested SQL_LOG popup and display system.
+2. Integration of Telerik DevCraft UI.
+3. Encryption of user data strings.
+4. Calender and Interview Schedule Tool.
+5. Access and generate real time or historical reports based on any recruiting metric or stored data.
+
