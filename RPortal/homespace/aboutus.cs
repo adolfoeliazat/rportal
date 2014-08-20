@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*
+ ____________________              __         .__   
+\______   \______   \____________/  |______  |  |  
+ |       _/|     ___/  _ \_  __ \   __\__  \ |  |  
+ |    |   \|    |  (  <_> )  | \/|  |  / __ \|  |__
+ |____|_  /|____|   \____/|__|   |__| (____  /____/
+        \/                                 \/      
+		
+
+(c) 2014 TeleNetwork Inc.
+Created by David Trimm
+
+aboutus.cs - RPortal Info Popup. 
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

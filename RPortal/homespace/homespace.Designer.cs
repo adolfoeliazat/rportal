@@ -34,6 +34,7 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radCalendar1 = new Telerik.WinControls.UI.RadCalendar();
             this.radClock1 = new Telerik.WinControls.UI.RadClock();
+            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
@@ -46,7 +47,8 @@
             // 
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuItem1,
-            this.radMenuItem2});
+            this.radMenuItem2,
+            this.radMenuItem3});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(1281, 20);
@@ -94,6 +96,14 @@
             this.radClock1.TabIndex = 3;
             this.radClock1.Text = "radClock1";
             // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.AccessibleDescription = "Admin";
+            this.radMenuItem3.AccessibleName = "Admin";
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Text = "Admin";
+            this.radMenuItem3.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
             // homespace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,8 +119,10 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "RPortal";
             this.ThemeName = "ControlDefault";
+            this.Load += new System.EventHandler(this.homespace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
@@ -130,5 +142,6 @@
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private Telerik.WinControls.UI.RadCalendar radCalendar1;
         private Telerik.WinControls.UI.RadClock radClock1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
     }
 }

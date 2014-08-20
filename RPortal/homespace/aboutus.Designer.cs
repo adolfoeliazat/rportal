@@ -29,20 +29,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aboutus));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.okRadButton = new Telerik.WinControls.UI.RadButton();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.radLabelProductName = new Telerik.WinControls.UI.RadLabel();
             this.radLabelVersion = new Telerik.WinControls.UI.RadLabel();
             this.radLabelCopyright = new Telerik.WinControls.UI.RadLabel();
             this.radLabelCompanyName = new Telerik.WinControls.UI.RadLabel();
-            this.okRadButton = new Telerik.WinControls.UI.RadButton();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.tableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okRadButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelProductName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelVersion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelCopyright)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelCompanyName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okRadButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,17 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(388, 265);
             this.tableLayoutPanel.TabIndex = 0;
+            // 
+            // okRadButton
+            // 
+            this.okRadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.okRadButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okRadButton.Location = new System.Drawing.Point(310, 239);
+            this.okRadButton.Name = "okRadButton";
+            this.okRadButton.Size = new System.Drawing.Size(75, 23);
+            this.okRadButton.TabIndex = 24;
+            this.okRadButton.Text = "&OK";
+            this.okRadButton.Click += new System.EventHandler(this.okRadButton_Click);
             // 
             // logoPictureBox
             // 
@@ -149,17 +160,6 @@
             this.radLabelCompanyName.Text = "Registered to Telenetwork Inc until 2999";
             this.radLabelCompanyName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // okRadButton
-            // 
-            this.okRadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okRadButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okRadButton.Location = new System.Drawing.Point(310, 239);
-            this.okRadButton.Name = "okRadButton";
-            this.okRadButton.Size = new System.Drawing.Size(75, 23);
-            this.okRadButton.TabIndex = 24;
-            this.okRadButton.Text = "&OK";
-            this.okRadButton.Click += new System.EventHandler(this.okRadButton_Click);
-            // 
             // radLabel1
             // 
             this.radLabel1.Location = new System.Drawing.Point(131, 107);
@@ -192,12 +192,12 @@
             this.Load += new System.EventHandler(this.aboutus_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okRadButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelProductName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelVersion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelCopyright)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabelCompanyName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okRadButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
