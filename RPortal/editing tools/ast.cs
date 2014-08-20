@@ -25,6 +25,26 @@ namespace WindowsFormsApplication1
 {
     public partial class ast : Form
     {
+        //this is our xport table
+        public static int BGID;
+        public static string FN;
+        public static string MN;
+        public static string LN;
+        public static string ADD;
+        public static string CTY;
+        public static string STA;
+        public static string ZIPC;
+        public static string PHONENUM;
+        public static string SSN;
+        public static string DOB;// = DateTime.ParseExact("2014-04-05 14:40:52,531", "yyyy-MM-dd HH:mm:ss,fff",System.Globalization.CultureInfo.InvariantCulture);
+        public static DateTime DTDOB;
+        public static DateTime SIGNED;
+        public static int APPID;
+        public static DateTime RUNDATE;
+        public static string RESULT;
+        public static string SUFFIX;
+        public static string MAIDENNAME;
+
         SqlConnection con = new SqlConnection("server=itdev.corp.telenetwork.com;Database=dttests;User=sa; PWD=gR!FfiN-;");
         SqlConnection conn = new SqlConnection("server=sql-prod.corp.telenetwork.com;Database=PreHire;User=sa; PWD=qwerty;");
         SqlCommand cmd = new SqlCommand();

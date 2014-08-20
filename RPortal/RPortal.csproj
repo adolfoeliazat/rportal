@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -78,8 +78,19 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="auth system\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auth system\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="editing tools\ast.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +103,18 @@
     </Compile>
     <Compile Include="auth system\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homespace\aboutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homespace\aboutus.Designer.cs">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homespace\homespace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homespace\homespace.Designer.cs">
+      <DependentUpon>homespace.cs</DependentUpon>
     </Compile>
     <Compile Include="interviews\interviews.cs">
       <SubType>Form</SubType>
@@ -119,11 +142,20 @@
     <Compile Include="sql_log\sqlwriterlog.Designer.cs">
       <DependentUpon>sqlwriterlog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="auth system\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editing tools\ast.resx">
       <DependentUpon>ast.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="auth system\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homespace\aboutus.resx">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homespace\homespace.resx">
+      <DependentUpon>homespace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="interviews\interviews.resx">
       <DependentUpon>interviews.cs</DependentUpon>
@@ -181,6 +213,14 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_48166.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\drp.png" />
+    <Content Include="Resources\Red_Exclamation_Mark.png" />
+    <None Include="Resources\RPortal-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

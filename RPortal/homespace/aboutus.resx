@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="radLabel1.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span lang="EN"&gt;&lt;p&gt;Credits and Copyright Information&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Project Manager and Lead Programmer:&lt;/p&gt;&lt;p&gt;-David Trimm&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Art by:&lt;/p&gt;&lt;p&gt;Melvin Poppelaars&lt;/p&gt;&lt;p&gt;Joe Mortell&lt;/p&gt;&lt;p&gt;Andrew Hainen&lt;/p&gt;&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
 </root>

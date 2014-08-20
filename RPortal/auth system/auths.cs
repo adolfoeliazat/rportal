@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
     {
         public static int IsAdmin;
         public static int IsSuperUser;
+        public static string WhosLoggedIn;
         public enum Group : int{User, SR, Admin};
         public void IsUserAdmin(object sender, EventArgs e)
         { }

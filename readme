@@ -11,9 +11,21 @@ Created by David Trimm
 
 Todo:
 -----
-1. Port over completed and tested SQL_LOG popup and display system.
-2. Integration of Telerik DevCraft UI.
-3. Encryption of user data strings.
-4. Calender and Interview Schedule Tool.
-5. Access and generate real time or historical reports based on any recruiting metric or stored data.
+1. Calender and Interview Schedule Tool. Organized and functional use of all interview functions. Still needs basic functionality. - HIGH
+2. Integrate all the standard phone script forms, ect. - HIGH
+3. Access and generate real time or historical reports based on any recruiting metric or stored data. - MEDIUM
+4. Admin ability to change and add new phone script questions, data fields, ect. - MEDIUM
+5. Encryption of user data strings. - BEFORE RELEASE
+6. Skype Video Conference API. - LOW
+7. Use LDAP or ActiveDirectory for authenticating users. - LOWEST
+
+
+Completed:
+----------
+-Port over completed and tested SQL_LOG auth logging system.
+-Integration of Telerik DevCraft UI.
+-Background Check Editing Tool
+-Applicant Editing Tool
+-
+
 
