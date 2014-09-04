@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.search2 = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.middlename = new System.Windows.Forms.TextBox();
@@ -92,18 +91,6 @@
             this.logo.Size = new System.Drawing.Size(268, 50);
             this.logo.TabIndex = 23;
             this.logo.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(12, 492);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 42);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "*";
-            this.label11.Visible = false;
             // 
             // back
             // 
@@ -311,7 +298,6 @@
             this.Controls.Add(this.lastname);
             this.Controls.Add(this.firstname);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.search2);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.label3);
@@ -331,7 +317,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button search2;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox middlename;

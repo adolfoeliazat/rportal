@@ -62,6 +62,8 @@ namespace WindowsFormsApplication1.auth_system
                 {
                     var myForm = new homespace.homespace();
                     myForm.Show();
+                    var myForm2 = new main();
+                    myForm2.Show();
                     this.Hide();
                     log = 1;
                 }
@@ -73,6 +75,8 @@ namespace WindowsFormsApplication1.auth_system
                 {
                     var myForm = new homespace.homespace();
                     myForm.Show();
+                    var myForm2 = new main();
+                    myForm2.Show();
                     this.Hide();
                 }
                 finally

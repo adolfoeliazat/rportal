@@ -141,6 +141,7 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.Size = new System.Drawing.Size(823, 140);
             this.dataGridView.TabIndex = 1;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // aus
             // 

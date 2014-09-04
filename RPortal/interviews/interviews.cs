@@ -81,5 +81,10 @@ namespace WindowsFormsApplication1.interviews
             }
             dataGridView.DataSource = ds.Tables[0];
         }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

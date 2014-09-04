@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PreHireDataSet" targetNamespace="http://tempuri.org/PreHireDataSet.xsd" xmlns:mstns="http://tempuri.org/PreHireDataSet.xsd" xmlns="http://tempuri.org/PreHireDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PreHireConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PreHireConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.PreHireConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InterviewsTableAdapter" GeneratorDataComponentClassName="InterviewsTableAdapter" Name="Interviews" UserDataComponentName="InterviewsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PreHireConnectionString (Settings)" DbObjectName="PreHire.dbo.Interviews" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT intid FROM dbo.Interviews</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="intid" DataSetColumn="intid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PreHireDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PreHireDataSet" msprop:Generator_UserDSName="PreHireDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Interviews" msprop:Generator_TableClassName="InterviewsDataTable" msprop:Generator_TableVarName="tableInterviews" msprop:Generator_TablePropName="Interviews" msprop:Generator_RowDeletingName="InterviewsRowDeleting" msprop:Generator_RowChangingName="InterviewsRowChanging" msprop:Generator_RowEvHandlerName="InterviewsRowChangeEventHandler" msprop:Generator_RowDeletedName="InterviewsRowDeleted" msprop:Generator_UserTableName="Interviews" msprop:Generator_RowChangedName="InterviewsRowChanged" msprop:Generator_RowEvArgName="InterviewsRowChangeEvent" msprop:Generator_RowClassName="InterviewsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="intid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnintid" msprop:Generator_ColumnPropNameInRow="intid" msprop:Generator_ColumnPropNameInTable="intidColumn" msprop:Generator_UserColumnName="intid" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

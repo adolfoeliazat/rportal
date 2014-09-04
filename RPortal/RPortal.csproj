@@ -79,6 +79,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.GridView, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -122,11 +123,22 @@
     <Compile Include="interviews\interviews.Designer.cs">
       <DependentUpon>interviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="interviews\ramon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interviews\ramon.Designer.cs">
+      <DependentUpon>ramon.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreHireDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PreHireDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="searching\mst.cs">
       <SubType>Form</SubType>
@@ -160,6 +172,9 @@
     <EmbeddedResource Include="interviews\interviews.resx">
       <DependentUpon>interviews.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="interviews\ramon.resx">
+      <DependentUpon>ramon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,18 @@
     <EmbeddedResource Include="sql_log\sqlwriterlog.resx">
       <DependentUpon>sqlwriterlog.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="PreHireDataSet.xsc">
+      <DependentUpon>PreHireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PreHireDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PreHireDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PreHireDataSet.xss">
+      <DependentUpon>PreHireDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -219,6 +246,7 @@
     <None Include="Resources\key.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\drp.png" />
+    <None Include="Resources\monitor.png" />
     <Content Include="Resources\Red_Exclamation_Mark.png" />
     <None Include="Resources\RPortal-logo.png" />
   </ItemGroup>

@@ -75,6 +75,7 @@
             // 
             // uN
             // 
+            this.uN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.uN.Location = new System.Drawing.Point(498, 421);
             this.uN.Name = "uN";
             this.uN.Size = new System.Drawing.Size(135, 20);
@@ -82,6 +83,7 @@
             // 
             // pW
             // 
+            this.pW.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pW.Location = new System.Drawing.Point(498, 472);
             this.pW.Name = "pW";
             this.pW.PasswordChar = '*';
@@ -90,53 +92,58 @@
             // 
             // radLabel1
             // 
-            this.radLabel1.Font = new System.Drawing.Font("Eurostile Next LT Pro", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.radLabel1.Location = new System.Drawing.Point(516, 396);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(95, 19);
+            this.radLabel1.Size = new System.Drawing.Size(72, 18);
             this.radLabel1.TabIndex = 4;
             this.radLabel1.Text = "username:";
             // 
             // radLabel2
             // 
-            this.radLabel2.Font = new System.Drawing.Font("Eurostile Next LT Pro", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.radLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.radLabel2.Location = new System.Drawing.Point(516, 447);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(94, 19);
+            this.radLabel2.Size = new System.Drawing.Size(70, 18);
             this.radLabel2.TabIndex = 5;
             this.radLabel2.Text = "password:";
             // 
             // radLabel3
             // 
+            this.radLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel3.Font = new System.Drawing.Font("Eurostile Next LT Pro", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel3.ForeColor = System.Drawing.Color.Silver;
-            this.radLabel3.Location = new System.Drawing.Point(193, 593);
+            this.radLabel3.Location = new System.Drawing.Point(301, 593);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(737, 14);
+            this.radLabel3.Size = new System.Drawing.Size(542, 13);
             this.radLabel3.TabIndex = 6;
             this.radLabel3.Text = "This software contains confidential information. Unauthorized access to these dat" +
     "abases and systems will be punished by law.";
             // 
             // radLabel4
             // 
+            this.radLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel4.Font = new System.Drawing.Font("Eurostile Next LT Pro", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel4.ForeColor = System.Drawing.Color.Silver;
-            this.radLabel4.Location = new System.Drawing.Point(416, 580);
+            this.radLabel4.Location = new System.Drawing.Point(466, 580);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(324, 14);
+            this.radLabel4.Size = new System.Drawing.Size(190, 13);
             this.radLabel4.TabIndex = 7;
-            this.radLabel4.Text = "(C) 2014 Delicious Softwares LLC. Used under license.";
+            this.radLabel4.Text = "(C) 2014 David Trimm. Used under license.";
             // 
             // exit
             // 
+            this.exit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exit.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.exit.Font = new System.Drawing.Font("Eurostile Next LT Pro", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.exit.Image = global::WindowsFormsApplication1.Properties.Resources.close;
             this.exit.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,9 +157,10 @@
             // 
             // validate
             // 
+            this.validate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.validate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.validate.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
-            this.validate.Font = new System.Drawing.Font("Eurostile Next LT Pro", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.validate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.validate.Image = global::WindowsFormsApplication1.Properties.Resources.key;
             this.validate.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,6 +174,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.drp;
             this.pictureBox1.Location = new System.Drawing.Point(360, 30);
@@ -178,8 +187,8 @@
             // 
             // LoginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
             this.CancelButton = this.exit;
             this.ClientSize = new System.Drawing.Size(1133, 607);
@@ -196,6 +205,7 @@
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RPortal - Login Screen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radTitleBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uN)).EndInit();
